@@ -9,5 +9,11 @@ var Rooms = {
 
   // TODO: Define methods which allow you to add rooms, update the list,
   // mark a room as selected, etc.
-
+  addRoom: function(data) {
+    var roomSet = Set(data);
+    for (obj in data) {
+      roomSet.add(obj.roomname);
+    }
+    _data = roomSet;
+  }
 };

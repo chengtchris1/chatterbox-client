@@ -5,9 +5,19 @@
 var Messages = {
 
   // TODO: Define how you want to store your messages.
-  _data: null,
+  _data: [],
+  _lastMsg: undefined,
 
   // TODO: Define methods which allow you to retrieve from,
   // add to, and generally interact with the messages.
+  getNew: function(messageData) {
+    _lastMsg = messageData[messageData.length - 1];
+    this._data = messageData;
 
+  }
+
+  // add: function(value) {
+  //   _data.push(value);
+  // }
 };
+
